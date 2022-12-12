@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<style>
+    .card{
+        margin-top: 150px;
+    }
+    #p{
+      color: palevioletred;
+    }
+</style>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 mx-auto">
+                <div class="card shadow" style="width: 18rem;">
+                    
+                    <div class="card-body">
+                      <h5 class="card-title">Shayri ki Dayri</h5>
+                      <p id="p" class="card-text"></p>
+                      <a href="#" onclick="getRandomItem();" id="playbtn" class=" btn btn-primary text-decoration-none">🔊Play Shayri</a>
+                      <button class="btn btn-success" onclick="cleardata();">Clear</button>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
+<script>
+    function getRandomItem() {
+
+        const arr = [
+        "जिंदगी में कोई प्यार से प्यारा नही मिलता जिंदगी में कोई प्यार से प्यारा नही मिलता जो है पास आपके उसको सम्भाल कर रखना क्योंकि एक बार खोकर प्यार दोबारा नही मिलता",
+        "बहुत सुकून मिलता है जब उनसे हमारी बात होती है वो हजारो रातों में वो एक रात होती है जब निगाहें उठा कर देखते हैं वो मेरी तरफ, तब वो ही पल मेरे लीये पूरी कायनात होती है।",
+        "आग लगी दिल में जब वो खफ़ा हुए एहसास हुआ तब, जब वो जुदा हुए करके वफ़ा वो हमे कुछ दे न सके लेकिन दे गये बहुत कुछ जब वो वेबफा हुए।",
+        "As he read, I fell in love the way you fall asleep: slowly, and then all at once.",
+        "Loved you yesterday, love you still, always have, always will.",
+        "I saw that you were perfect, and so I loved you. Then I saw that you were not perfect and I loved you even more.",
+        " love you not only for what you are, but for what I am when I am with you. I love you not only for what you have made of yourself, but for what you are making of me. I love you for the part of me that you bring out.",
+        "Thinking of you keeps me awake. Dreaming of you keeps me asleep. Being with you keeps me alive.",
+        "I need you like a heart needs a beat.",
+        "When I say I love you more, I don’t mean I love you more than you love me. I mean I love you more than the bad days ahead of us, I love you more than any fight we will ever have. I love you more than the distance between us, I love you more than any obstacle that could try and come between us. I love you the most.",
+        "If I know what love is, it is because of you.",
+        "I fell in love with her courage, her sincerity, and her flaming self respect. And it’s these things I’d believe in, even if the whole world indulged in wild suspicions that she wasn’t all she should be. I love her and it is the beginning of everything.",
+        "I swear I couldn’t love you more than I do right now, and yet I know I will tomorrow.",
+        "If you live to be a hundred, I want to live to be a hundred minus one day so I never have to live without you",
+        "A man is already halfway in love with any woman who listens to him.” – Brendan Francis",
+        "I love you as certain dark things are to be loved, in secret, between the shadow and the soul.",
+        "Women are meant to be loved, not to be understood.",
+        "You make me want to be a better man.",
+        "Thinking of you keeps me awake. Dreaming of you keeps me asleep. Being with you keeps me alive.",
+        "There is never a time or place for true love. It happens accidentally, in a heartbeat, in a single flashing, throbbing moment.",
+        "Love is that condition in which the happiness of another person is essential to your own.",
+        "Love never dies a natural death. It dies because we don’t know how to replenish its source. It dies of blindness and errors and betrayals. It dies of illness and wounds; it dies of weariness, of witherings, of tarnishings.",
+        "He is not a lover who does not love forever.",
+        "To love is to burn, to be on fire.",
+        "Love does not begin and end the way we seem to think it does. Love is a battle, love is a war; love is a growing up.",
+        "In the end we discover that to love and let go can be the same thing.” – Jack Kornfield",
+        "Pleasure of love lasts but a moment. Pain of love lasts a lifetime.",
+        "To love at all is to be vulnerable. Love anything and your heart will be wrung and possibly broken. If you want to make sure of keeping it intact you must give it to no one, not even an animal. Wrap it carefully round with hobbies and little luxuries; avoid all entanglements. Lock it up safe in the casket or coffin of your selfishness. But in that casket, safe, dark, motionless, airless, it will change. It will not be broken; it will become unbreakable, impenetrable, irredeemable. To love is to be vulnerable.",
+        "Love is an untamed force. When we try to control it, it destroys us. When we try to imprison it, it enslaves us. When we try to understand it, it leaves us feeling lost and confused.",
+        "Love is so short, forgetting is so long.",
+        "Love is a thing that is full of cares and fears.",
+        "Love is not love until love’s vulnerable.",
+        "You know you’re in love when you can’t fall asleep because reality is finally better than your dreams.",
+        "I love you without knowing how, or when, or from where. I love you simply, without problems or pride: I love you in this way because I do not know any other way of loving but this, in which there is no I or you, so intimate that your hand upon my chest is my hand, so intimate that when I fall asleep your eyes close.” – Pablo Neruda",
+        "Love is like the wind, you can’t see it but you can feel it.",
+        "Love is the magician that pulls man out of his own hat.",
+        "The best love is the kind that awakens the soul; that makes us reach for more, that plants the fire in our hearts and brings peace to our minds. That’s what I hope to give you forever.",
+        "I would rather spend one lifetime with you, than face all the ages of this world alone",
+        "To be your friend was all I ever wanted; to be your lover was all I ever dreamed",
+        "My wish is that you may be loved to the point of madness.",
+        "A purpose of human life, no matter who is controlling it, is to love whoever is around to be loved.",
+        "Romance is the glamour which turns the dust of everyday life into a golden haze.",
+        "Love is always patient and kind. It is never jealous. Love is never boastful or conceited. It is never rude or selfish. It does not take offense and is not resentful. Love takes no pleasure in other people’s sins, but delights in the truth. It is always ready to excuse, to trust, to hope, and to endure whatever comes.",
+        "Love is the strange bewilderment which overtakes one person on account of another person.",
+        "One word frees us of all the weight and pain of life: that word is love.” – Sophocles",
+        "Flatter me, and I may not believe you. Criticize me, and I may not like you. Ignore me, and I may not forgive you. Encourage me, and I will not forget you. Love me and I may be forced to love you.",
+        "It is better to be hated for what you are than to be loved for what you are not.” – Andre Gide",
+        "This has been my life; I found it worth living.",
+        "We must be our own before we can be another’s.",
+        "Choose a job you love, and you will never have to work a day in your life.” – Confucius",
+        "Let the beauty of what you love be what you do",
+        "Only true love can fuel the hard work that awaits you.",
+        "Love many things, for therein lies the true strength, and whosoever loves much performs much, and can accomplish much, and what is done in love is done well.",
+        "Just don’t give up trying to do what you really want to do. Where there’s love and inspiration, I don’t think you can go wrong.",
+        "Pursue some path, however narrow and crooked, in which you can walk with love and reverence.",
+        "Do what you love, and you will find the way to get it out to the world.” – Judy Collins",
+        "You, yourself, as much as anybody in the entire universe, deserve your love and affection.",
+        "Self-love, my liege, is not so vile a sin, as self-neglecting.” – William Shakespeare",
+        "I believe that everything happens for a reason. People change so that you can learn to let go, things go wrong so that you appreciate them when they’re right, you believe lies so you eventually learn to trust no one but yourself, and sometimes good things fall apart so better things can fall together.",
+        "I have decided to stick to love; hate is too great a burden to bear.",
+        "The greatest thing you’ll ever learn is to love and be loved in return.",
+        "I hope you know that every time I tell you to get home safe, stay warm, have a good day, or sleep well what I am really saying is I love you. I love you so damn much that it is starting to steal other words’ meanings. ",
+        "The greatest degree of inner tranquility comes from the development of love and compassion. The more we care for the happiness of others, the greater is our own sense of well-being."
+    ]
+
+
+        // get random index value
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        // get random item
+        const item = arr[randomIndex];
+        var p = document.getElementById("p");
+        var text = document.createTextNode(item);
+        p.appendChild(text)
+        var msg = new SpeechSynthesisUtterance(item);
+        window.speechSynthesis.speak(msg);
+
+        var btn = document.getElementById("playbtn");
+        btn.classList.add("disabled");
+
+        
+
+    }
+
+    function cleardata(){
+        console.log("clear")
+        var btn = document.getElementById("playbtn");
+        btn.classList.remove("disabled");
+        document.getElementById("p").innerHTML = "";
+    }
+
+   
+    // const result = getRandomItem(array);
+</script>
